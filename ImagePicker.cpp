@@ -1,3 +1,11 @@
+//
+//  ImagePicker.cpp
+//  ImagePicker
+//
+//  Created by Festina Lente on 17.07.2013.
+//
+//
+
 #include "ImagePicker.h"
 
 bool ImagePicker::working = false;
@@ -10,7 +18,7 @@ extern "C" {
 #endif
     void Java_org_cocos2dx_lib_Cocos2dxActivity_informNative(JNIEnv *env, jobject thiz)
     {
-        ImagePicker::ready = true;
+        ImagePicker::setReady();
     }
     
     void Java_org_cocos2dx_lib_Cocos2dxActivity_informNativeCancel(JNIEnv *env, jobject thiz) {
@@ -100,6 +108,10 @@ void ImagePicker::finished() {
             _delegate->didFinishPickingWithResult(true);
     }
     
+}
+
+void ImagePicker::setReady() {
+    sharedPicker->ready = true;
 }
 
 void ImagePicker::dismissed() {
