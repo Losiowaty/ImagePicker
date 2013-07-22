@@ -1,11 +1,3 @@
-//
-//  ImagePicker.cpp
-//  ImagePicker
-//
-//  Created by Festina Lente on 17.07.2013.
-//
-//
-
 #include "ImagePicker.h"
 
 bool ImagePicker::working = false;
