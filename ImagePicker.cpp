@@ -34,8 +34,11 @@ bool ImagePicker::pickImage(CCNode *target, CCPoint position, ImagePickerDelegat
     
     if (!working) {
         
-        if (sharedPicker)
+        if (sharedPicker) {
+            if (sharedPicker->getParent())
+                sharedPicker->removeFromParentAndCleanup(true);
             delete sharedPicker;
+        }
         
         sharedPicker = new ImagePicker();
         sharedPicker->_target = target;
