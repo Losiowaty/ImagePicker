@@ -40,7 +40,7 @@ UIPopoverController *pop;
     
     [self cleanup];
     
-    ImagePicker::ready = true;
+    ImagePicker::setReady();
 }
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
