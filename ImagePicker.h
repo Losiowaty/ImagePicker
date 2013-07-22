@@ -59,6 +59,6 @@ extern "C" {
 }
 #endif
 
-#endif /* if CC_PLATFORM_ANDROID)
+#endif /* if CC_PLATFORM_ANDROID) */
 
 #endif /* defined(__ImagePicker__ImagePicker__) */
